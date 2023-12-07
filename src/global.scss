@@ -1,0 +1,38 @@
+
+@import './variables.scss';
+@import './mixins';
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
+
+// Default to light theme
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+// Dark theme class
+.dark-mode {
+  @include apply-theme($dark-theme);
+}
+
+.light-mode {
+  @include apply-theme($light-theme);
+}
+
+body{
+  font-family: 'Lato', 'sans-serif';
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 1px solid slategrey;
+}

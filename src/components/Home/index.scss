@@ -1,0 +1,167 @@
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 100vh;
+  overflow: hidden;
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 600px;
+    animation: slideFromLeft 1s ease-out forwards;
+
+    .hero-greeting {
+      font-size: 2rem;
+      font-weight: bold;
+
+      .wave {
+        animation-name: waveAnimation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+        display: inline-block;
+      }
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      
+    }
+
+    .ant-btn {
+      height: 40px;
+      border-radius: 50px;
+      background-color: #51b2e4;
+      font-weight: 600;
+      width: 150px;
+    }
+  }
+
+  .hero-image-container {
+    animation: slideFromRight 1s ease-out forwards,
+      float 3s ease-in-out infinite;
+    transform-origin: center bottom;
+    opacity: 0;
+  }
+
+  section:nth-child(2) {
+    animation: slideFromRight 1s ease-out forwards,
+      float 3s ease-in-out infinite;
+    transform-origin: center bottom; // Ensure the up-and-down movement pivots from the bottom
+  }
+  .hero,
+  section:nth-child(2) {
+    opacity: 0; // Start elements as invisible before animation
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on small screens */
+    justify-content: center; /* Center items along the main axis */
+    align-items: center; /* Center items along the cross axis */
+    text-align: center; /* Center-align the text for smaller screens */
+    padding-top: 40px;
+    gap: 40px;
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      width: 100%; /* Full width of the container */
+      padding: 0 40px; /* Add some padding on the sides */
+      box-sizing: border-box; /* Include padding in width calculation */
+      animation: none; /* Optional: remove animation on small screens for simplicity */
+
+      .hero-greeting {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+      }
+    }
+
+    .hero-image-container {
+      width: 100%; /* Full width to make the image responsive */
+      max-width: 100%; /* Ensure the image is not larger than the container */
+      height: auto; /* Maintain the aspect ratio of the image */
+      animation: none; /* Optional: remove animation on small screens */
+    }
+
+    .hero,
+    .hero-image-container {
+      opacity: 1; /* Make sure content is visible */
+    }
+  }
+}
+
+// You may need to adjust your z-index if elements overlap incorrectly

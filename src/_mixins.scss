@@ -1,0 +1,15 @@
+@mixin apply-theme($theme) {
+    background-color: map-get($theme, background);
+    color: map-get($theme, text);
+  }
+  
+  $light-theme: (
+    background: $light-theme-background,
+    text: $light-theme-text,
+  );
+  
+  $dark-theme: (
+    background: $dark-theme-background,
+    text: $dark-theme-text,
+  );
+  

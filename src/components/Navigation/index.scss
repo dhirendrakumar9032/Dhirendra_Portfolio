@@ -1,0 +1,84 @@
+// Keyframes for the floating animation
+@keyframes floatUpFromBottom {
+  0% {
+    transform: translateY(50px); // Start below the viewable area
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Container for centering the navigation bar
+.navigation-container {
+  position: fixed; // Fixed position
+  left: 0;
+  right: 0;
+  bottom: 24px; // 24px from the bottom
+  display: flex;
+  justify-content: center; // Center horizontally
+  animation: floatUpFromBottom 0.5s ease-out; // Apply the animation
+}
+
+.navigation-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: fit-content;
+  height: 60px;
+  border-radius: 50px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); // Semi-transparent white
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%); // Fully transparent background
+  backdrop-filter: blur(10px); // Blur effect applied to content underneath
+  box-shadow: rgb(255, 255, 255) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+
+  z-index: 10000; // Make sure it's above other content
+  // No need to transform here since it's taken care of by the container
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 0 14px;
+
+  &:hover {
+    background-color: #e6f7ff;
+    border-radius: 60px;
+  }
+
+  .anticon {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  &.selected {
+    background-color: #e6f7ff;
+    border-radius: 60px;
+    .anticon {
+      color: #1890ff;
+    }
+  }
+}
+
+// Additional responsive styling if needed
+@media (max-width: 480px) {
+  .navigation-bar {
+    padding: 10px 5px; // Reduce padding on smaller screens
+  }
+}
+
+.navigation-container-hide {
+    display: none; // Or 'flex' if it was a flex container
+  }
