@@ -14,14 +14,13 @@ import { motion } from "framer-motion";
 import { TfiEmail } from "react-icons/tfi";
 import { VscCallOutgoing } from "react-icons/vsc";
 
-type Props = {};
 
 type socialMediaLinksType = {
   link: string;
   logo: JSX.Element;
 };
 
-const Home = (props: Props) => {
+const Home = () => {
   const socialMediaLinks: socialMediaLinksType[] = [
     {
       link: "https://www.linkedin.com/in/dhirendra-kumar-9032/",

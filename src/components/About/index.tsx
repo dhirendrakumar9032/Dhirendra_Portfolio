@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.scss";
 import ExperienceSection from "./experience";
+import { ExperienceEntry } from "./type";
 
-type Props = {};
 
-const About = (props: Props) => {
-  const educationEntries = [
+const About = () => {
+  const educationEntries: ExperienceEntry[] = [
     {
       role: "Software Engineer (Frontend)",
       company: "Qapita Fintech India Pvt Ltd, Hyderabad",
@@ -19,6 +19,7 @@ const About = (props: Props) => {
         "I also worked on support tickets, debugging and fixing reported bugs from clients or testers.",
       ],
     },
+    
   ];
 
   return (
@@ -31,7 +32,7 @@ const About = (props: Props) => {
         <div className="about">
           <div className="about-logo"></div>
           <div className="about-description">
-            I'm Dhirendra Kumar, a Frontend Engineer at Qapita Fintech India Pvt
+          I'm Dhirendra Kumar, a Frontend Engineer at Qapita Fintech India Pvt
             Ltd, specializing in JavaScript, CSS3, HTML5, React.js 18.0,
             TypeScript, and Redux. Passionate about crafting user-friendly
             interfaces, I focus on functional components in React to deliver

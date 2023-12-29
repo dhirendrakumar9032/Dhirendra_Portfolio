@@ -1,22 +1,14 @@
 import React from "react";
 import "./index.scss";
+import { ExperienceEntry } from "./type";
 
-interface ExperienceEntryProps {
-  role: string;
-  company: string;
-  period: string;
-  responsibilities: string[];
-  key?:string|number
-}
-
-const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
+const ExperienceEntryComponent: React.FC<ExperienceEntry> = ({
   role,
   company,
   period,
   responsibilities,
-  key,
 }) => (
-  <div className="experience-entry" key={key}>
+  <div className="experience-entry">
     <div className="timeline">
       <div className="timeline-dot" />
       <div className="timeline-line" />
@@ -26,8 +18,8 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
       <div className="period">{period}</div>
       <div className="company">{company}</div>
       <ul className="responsibility">
-        {responsibilities.map((item: string) => (
-          <li>{item}</li>
+        {responsibilities.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>
@@ -35,14 +27,14 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
 );
 
 interface ExperienceSectionProps {
-  entries: ExperienceEntryProps[];
+  entries: ExperienceEntry[];
 }
 
 const ExperienceSection: React.FC<ExperienceSectionProps> = ({ entries }) => (
   <div className="experience-section">
     <h2 className="section-title">Professional Experience</h2>
     {entries.map((entry, index) => (
-      <ExperienceEntry key={index} {...entry} />
+      <ExperienceEntryComponent key={index} {...entry} />
     ))}
   </div>
 );
