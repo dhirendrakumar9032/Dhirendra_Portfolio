@@ -1,12 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Carousel } from "antd";
 import "swiper/css";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 import "swiper/css/effect-cards";
-import { projects, Project } from './projectsData'; 
+import { projects, ProjectType } from './projectsData'; 
 import "./index.scss";
 
 const Projects = () => {
-  const renderProjectCard = (project: Project) => (
+  const renderProjectCard = (project: ProjectType) => (
     <SwiperSlide key={project.id}>
       <div className="card">
         <div className="infoSection">
@@ -25,13 +26,19 @@ const Projects = () => {
             <a href="#github-repo" className="button githubButton">GitHub Repository</a>
           </div>
         </div>
-        <div className="imageSection">
-          <img
-            src="https://i.imgur.com/LRz7s3L.png"
+        <Carousel autoplay autoplaySpeed={3000}>
+       
+        {project.projectImgLinks.map(link =><div className="imageSection">
+         <img
+            src={link}
+            key={link}
             alt="Project background"
             className="backgroundImage"
           />
-        </div>
+          
+        </div>)}
+        
+        </Carousel>
       </div>
     </SwiperSlide>
   );
@@ -47,11 +54,11 @@ const Projects = () => {
         grabCursor={true}
         modules={[EffectCards, Autoplay, Pagination]}
         loop={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
+        // autoplay={{
+        //   delay: 8000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: true,
+        // }}
         pagination={{
           clickable: true,
         }}

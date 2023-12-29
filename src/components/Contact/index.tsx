@@ -1,8 +1,8 @@
-import { Button, Form, Image, Input, Spin, message } from "antd";
-import emailjs from "emailjs-com";
-import "./index.scss";
-import contact from "../../resources/icons/contact.svg";
 import { useState } from "react";
+import { Button, Form, Image, Input, Spin, message } from "antd";
+import contact from "../../resources/icons/contact.svg";
+import { sendEmail } from "./emailService";
+import "./index.scss";
 
 type ContactFormValues = {
   fullName: string;
@@ -13,26 +13,35 @@ type ContactFormValues = {
 const Contact = () => {
   const [form] = Form.useForm();
   const [isEmailSent, setEmailSent] = useState<boolean>(false);
+  
   const onFinish = (values: ContactFormValues) => {
-    const serviceID = "service_owrsw7p";
-    const templateID = "template_vd8nsef";
-    const userID = "UvkaCVlXq_MBlEYa3";
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
-    setEmailSent(true)
+    if (typeof serviceID === 'undefined' ||
+        typeof templateID === 'undefined' ||
+        typeof userID === 'undefined') {
+      console.error("EmailJS configuration is missing");
+      message.error("Cannot send email at this time. Please try again later.");
+      return;
+    }
 
-    emailjs.send(serviceID, templateID, values, userID).then(
+    setEmailSent(true);
+    sendEmail(serviceID, templateID, userID, values).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
         message.success("Message sent successfully!");
-        form.resetFields();
-        setEmailSent(false)
+        setEmailSent(false);
       },
       (err) => {
         console.log("FAILED...", err);
         message.error("Failed to send message.");
-        setEmailSent(false)
+        setEmailSent(false);
       }
-    );
+    ).finally(() => {
+      form.resetFields();
+    });
   };
 
   return (
