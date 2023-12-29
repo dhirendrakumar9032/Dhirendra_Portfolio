@@ -10,39 +10,25 @@ type Props = {};
 const Projects = (props: Props) => {
   const projects = [
     {
-      title: "Project 1",
+      title: "Dhirendra Kumar - Frontend Web Developer Portfolio",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, consequuntur!",
-      technology: ["React", "Typescript", "JS"],
+        "An interactive portfolio showcasing my skills and projects as a Frontend Engineer. The site features a modern and clean design with engaging animations, a professional overview, a detailed project section with Swiper for carousel functionality, and a dynamic contact form. Key sections highlight my technical skills, work experience, and a personal introduction.",
+      technology: ["React", "TypeScript", "Framer Motion", "Swiper", "SCSS"],
       id: 1,
     },
     {
-      title: "Project 2",
+      title: "Dhirendra Kumar - Frontend Web Developer Portfolio",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, consequuntur!",
-      technology: ["React", "Typescript", "JS"],
-      id: 2,
-    },
-    {
-      title: "Project 3",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, consequuntur!",
-      technology: ["React", "Typescript", "JS"],
+        "An interactive portfolio showcasing my skills and projects as a Frontend Engineer. The site features a modern and clean design with engaging animations, a professional overview, a detailed project section with Swiper for carousel functionality, and a dynamic contact form. Key sections highlight my technical skills, work experience, and a personal introduction.",
+      technology: ["React", "TypeScript", "Framer Motion", "Swiper", "SCSS"],
       id: 3,
     },
     {
-      title: "Project 4",
+      title: "Dhirendra Kumar - Frontend Web Developer Portfolio",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, consequuntur!",
-      technology: ["React", "Typescript", "JS"],
+        "An interactive portfolio showcasing my skills and projects as a Frontend Engineer. The site features a modern and clean design with engaging animations, a professional overview, a detailed project section with Swiper for carousel functionality, and a dynamic contact form. Key sections highlight my technical skills, work experience, and a personal introduction.",
+      technology: ["React", "TypeScript", "Framer Motion", "Swiper", "SCSS"],
       id: 4,
-    },
-    {
-      title: "Project 5",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, consequuntur!",
-      technology: ["React", "Typescript", "JS"],
-      id: 5,
     },
   ];
 
@@ -57,45 +43,47 @@ const Projects = (props: Props) => {
         grabCursor={true}
         modules={[EffectCards, Autoplay, Pagination]}
         loop={true}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: true,
-        //   pauseOnMouseEnter: true,
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         pagination={{
           clickable: true,
         }}
         className="mySwiper"
       >
-        {projects.map((project: any) => (
-          <SwiperSlide>
-            <div className={"infoSection"}>
-              <h1>Silentmoon</h1>
-              <p>
-                A yoga and meditation app that we built as a team with React,
-                MongoDB, Express, and Node.js. My task as a gitmaster and
-                backend developer was to program the backend with connection
-                using a restful API and to model the database in MongoDB.
-              </p>
-              <div className={"technologySection"}>
-                {/* Render technology icons here */}
+        {projects.map((project, index) => (
+          <SwiperSlide key={index} >
+            <div className="card">
+              <div className="infoSection">
+                <h1 className="project-title">{project.title}</h1>
+                <p className="project-description">{project.description}</p>
+                <div className="technologySection">
+                  <h3>Tech-Stack</h3>
+                  <div className="tech-stack">
+                  {project.technology.map((tech, idx) => (
+                    <span key={idx} className="tech-pill">{tech}</span>
+                  ))}
+                  </div>
+                 
+                </div>
+                <div className="buttons">
+                  <a href="#live-demo" className="button liveDemoButton">
+                    Live Demo
+                  </a>
+                  <a href="#github-repo" className="button githubButton">
+                    GitHub Repository
+                  </a>
+                </div>
               </div>
-              <div className={"buttons"}>
-                <a href="#live-demo" className={"liveDemoButton"}>
-                  Live Demo
-                </a>
-                <a href="#github-repo" className={"githubButton"}>
-                  GitHub Repository
-                </a>
+              <div className="imageSection">
+                <img
+                  src="https://i.imgur.com/LRz7s3L.png" // Replace with your image URL
+                  alt="Project background"
+                  className="backgroundImage"
+                />
               </div>
-            </div>
-            <div className={"imageSection"}>
-              {/* Assume you have an image with the class 'backgroundImage' */}
-              <img
-                src="your-image-url.jpg"
-                alt="Background"
-                className="backgroundImage"
-              />
             </div>
           </SwiperSlide>
         ))}
@@ -103,5 +91,6 @@ const Projects = (props: Props) => {
     </div>
   );
 };
+
 
 export default Projects;

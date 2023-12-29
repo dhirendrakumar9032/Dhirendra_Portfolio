@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import "./index.scss";
 import { NavigationContext } from "../../App";
+import logo from '../../resources/icons/logo.jpg'
 
 const Navbar = () => {
   const { toggleNav, isNavVisible } = useContext(NavigationContext);
@@ -14,10 +15,9 @@ const Navbar = () => {
       navbar?.classList.remove("scrolled");
     }
   });
-console.log({isNavVisible})
   return (
     <nav className="navbar">
-      <h1>Dhirendra Kumar</h1>
+      <div className="name"><img className="logo" src={logo} alt="logo"/><span>Dhirendra Kumar</span></div>
       {isNavVisible ? (
         <CloseOutlined className="hamburg" onClick={toggleNav} />
       ) : (

@@ -65,15 +65,19 @@
   height: 100vh;
   overflow: hidden;
 
+  .separate-color {
+    color: #64b280;
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 600px;
+
     animation: slideFromLeft 1s ease-out forwards;
 
     .hero-greeting {
-      font-size: 2rem;
+      font-size: 3.5rem;
       font-weight: bold;
 
       .wave {
@@ -87,14 +91,17 @@
 
     .hero-title {
       font-size: 3rem;
-      font-weight: bold;
+      font-weight: 700;
+      
     }
 
     .hero-subtitle {
       font-size: 16px;
+      font-family: "roboto";
       font-weight: 400;
       line-height: 20px;
-      
+      letter-spacing: 1px;
+      max-width: 600px;
     }
 
     .ant-btn {
@@ -103,6 +110,47 @@
       background-color: #51b2e4;
       font-weight: 600;
       width: 150px;
+    }
+
+    .social-media-link {
+      display: flex;
+      gap: 5px;
+
+      .links {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        object-fit: contain;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        :hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .can-connect-on{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .email{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 18px;
+            color: #64b280;
+        }
     }
   }
 

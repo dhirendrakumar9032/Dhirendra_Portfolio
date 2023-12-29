@@ -29,8 +29,8 @@ const App = () => {
 
   return (
     <NavigationContext.Provider value={{ isNavVisible, toggleNav }}>
-      <div className="light-mode">
-        <Navbar />
+      <Navbar />
+      <div className="app" >
         <Home />
         <About />
         <Skills/>

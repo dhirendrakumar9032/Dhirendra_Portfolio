@@ -1,20 +1,22 @@
-import React from 'react';
-import './index.scss';
+import React from "react";
+import "./index.scss";
 
 interface ExperienceEntryProps {
   role: string;
-  company: string,
-  period: string,
-  responsibilities:string[]
+  company: string;
+  period: string;
+  responsibilities: string[];
+  key?:string|number
 }
 
 const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   role,
   company,
-      period,
-      responsibilities
+  period,
+  responsibilities,
+  key,
 }) => (
-  <div className="experience-entry">
+  <div className="experience-entry" key={key}>
     <div className="timeline">
       <div className="timeline-dot" />
       <div className="timeline-line" />
@@ -23,7 +25,11 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
       <div className="role">{role}</div>
       <div className="period">{period}</div>
       <div className="company">{company}</div>
-      <ul className="responsibility">{responsibilities.map((item:string)=><li>{item}</li>)}</ul>
+      <ul className="responsibility">
+        {responsibilities.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   </div>
 );

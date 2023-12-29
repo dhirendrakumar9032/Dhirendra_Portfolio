@@ -8,16 +8,21 @@ import {
 import "./index.scss";
 import { NavigationContext } from "../../App";
 import {Link} from 'react-scroll';
+import { BiSolidContact } from "react-icons/bi";
+import { FaHome } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
+import { FaTools } from "react-icons/fa";
+import { RiComputerFill } from "react-icons/ri";
 
 const Navigation = () => {
   const { isNavVisible } = useContext(NavigationContext);
 
   const navItems = [
-    { id: "home", icon: <Link to="home" smooth={true} duration={500}><HomeOutlined /></Link> },
-    { id: "about", icon: <Link to="about" smooth={true} duration={500}><UserOutlined /></Link> },
-    { id: "skills", icon: <Link to="skills" smooth={true} duration={500}><HeartOutlined /></Link> },
-    { id: "projects", icon: <Link to="projects" smooth={true} duration={500}><MoneyCollectOutlined /></Link> },
-    { id: "contact", icon: <Link to="contact" smooth={true} duration={500}><UserOutlined /></Link> },
+    { id: "home", icon: <Link to="home" smooth={true} duration={500}><FaHome /></Link> },
+    { id: "about", icon: <Link to="about" smooth={true} duration={500}><IoPersonSharp /></Link> },
+    { id: "skills", icon: <Link to="skills" smooth={true} duration={500}><FaTools /></Link> },
+    { id: "projects", icon: <Link to="projects" smooth={true} duration={500}><RiComputerFill /></Link> },
+    { id: "contact", icon: <Link to="contact" smooth={true} duration={500}><BiSolidContact /></Link> },
   ];
 
   const scrollToSection = (sectionId: string) => {

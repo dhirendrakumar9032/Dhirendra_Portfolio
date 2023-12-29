@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 5px 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,19 +15,26 @@
   );
   backdrop-filter: blur(10px);
 
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+   
+    color: #d35400;
+    font-family: "Dancing Script";
+    font-weight: 700;
+    font-size: 38px;
+    .logo {
+      border:3px solid #64B280;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+    }
+  }
+
   .anticon {
     width: 30px;
     font-size: 30px;
   }
-}
-
-.navbar.scrolled {
-  background: #37517E; 
-  transition: background-color 0.3s;
-
- .anticon{
-    width: 30px;
-    font-size: 30px;
-  }
-
 }
