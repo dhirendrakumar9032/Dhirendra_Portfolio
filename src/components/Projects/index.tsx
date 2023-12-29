@@ -22,8 +22,8 @@ const Projects = () => {
             </div>
           </div>
           <div className="buttons">
-            <a href="#live-demo" className="button liveDemoButton">Live Demo</a>
-            <a href="#github-repo" className="button githubButton">GitHub Repository</a>
+            <a href={project.liveDemoUrl} target="_blank" rel="noreferrer" className="button liveDemoButton">Live Demo</a>
+            <a href={project.githubUrl} target="_blank" rel="noreferrer" className="button githubButton">GitHub Repository</a>
           </div>
         </div>
         <Carousel autoplay autoplaySpeed={3000}>
