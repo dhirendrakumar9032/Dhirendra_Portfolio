@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 @keyframes slideFromLeft {
   0% {
@@ -38,7 +38,7 @@
   }
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
   20% {
     transform: rotate(-8deg);
   }
@@ -53,7 +53,7 @@
   }
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
   100% {
     transform: rotate(0deg);
   }
@@ -68,7 +68,7 @@
   overflow: hidden;
 
   .separate-color {
-    color:$purple-color;
+    color: $purple-color;
   }
 
   .hero {
@@ -86,7 +86,7 @@
         animation-name: waveAnimation;
         animation-duration: 2.5s;
         animation-iteration-count: infinite;
-        transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+        transform-origin: 70% 70%;
         display: inline-block;
       }
     }
@@ -94,7 +94,6 @@
     .hero-title {
       font-size: 3rem;
       font-weight: 700;
-      
     }
 
     .hero-subtitle {
@@ -126,7 +125,7 @@
         justify-content: center;
         color: white;
         align-items: center;
-        background-image: linear-gradient(to right,$purple-color, #007bff);
+        background-image: linear-gradient(to right, $purple-color, #007bff);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         object-fit: contain;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -138,18 +137,18 @@
       }
     }
 
-    .can-connect-on{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+    .can-connect-on {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
 
-        .email{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 18px;
-            color: $purple-color;
-        }
+      .email {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        color: $purple-color;
+      }
     }
   }
 
@@ -163,52 +162,70 @@
   section:nth-child(2) {
     animation: slideFromRight 1s ease-out forwards,
       float 3s ease-in-out infinite;
-    transform-origin: center bottom; // Ensure the up-and-down movement pivots from the bottom
+    transform-origin: center bottom;
   }
   .hero,
   section:nth-child(2) {
-    opacity: 0; // Start elements as invisible before animation
+    opacity: 0;
+  }
+
+  @media (max-width: 992px) {
+   
+    .hero-greeting,
+    .hero-title,
+    .hero-subtitle {
+      font-size: smaller; 
+    }
+
   }
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Stack items vertically on small screens */
-    justify-content: center; /* Center items along the main axis */
-    align-items: center; /* Center items along the cross axis */
-    text-align: center; /* Center-align the text for smaller screens */
-    padding-top: 40px;
-    gap: 40px;
+    
+    padding-top: 20px;
+    gap: 20px;
 
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      width: 100%; /* Full width of the container */
-      padding: 0 40px; /* Add some padding on the sides */
-      box-sizing: border-box; /* Include padding in width calculation */
-      animation: none; /* Optional: remove animation on small screens for simplicity */
-
+      padding: 0 20px;
       .hero-greeting {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 80px;
+        font-size: 2.5rem;
+        
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
       }
     }
 
     .hero-image-container {
-      width: 100%; /* Full width to make the image responsive */
-      max-width: 100%; /* Ensure the image is not larger than the container */
-      height: auto; /* Maintain the aspect ratio of the image */
-      animation: none; /* Optional: remove animation on small screens */
+      width: 100%;
+      height: auto;
     }
 
-    .hero,
-    .hero-image-container {
-      opacity: 1; /* Make sure content is visible */
+    .social-media-link .links {
+      width: 40px; 
+      height: 40px;
+    }
+
+    .can-connect-on .email {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-greeting {
+      font-size: 2rem; 
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.875rem;
     }
   }
 }
-
-// You may need to adjust your z-index if elements overlap incorrectly

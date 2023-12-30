@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import './global.scss'
+import { Blogs } from "./components/Blogs";
 
 interface NavigationContextState {
   isNavVisible: boolean;
@@ -45,6 +46,7 @@ const App = () => {
         <About />
         <Skills/>
         <Projects/>
+        <Blogs/>
         <Contact/>
         <Navigation />
       </div>
