@@ -5,6 +5,7 @@ import { BiSolidContact } from "react-icons/bi";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaTools } from "react-icons/fa";
 import { RiComputerFill } from "react-icons/ri";
+import { FaBloggerB } from "react-icons/fa";
 import { NavigationContext } from "../../App";
 import "./index.scss";
 
@@ -41,6 +42,14 @@ const Navigation = () => {
       icon: (
         <Link to="projects" smooth={true} duration={500}>
           <RiComputerFill />
+        </Link>
+      ),
+    },
+    {
+      id: "blogs",
+      icon: (
+        <Link to="blogs" smooth={true} duration={500}>
+          <FaBloggerB />
         </Link>
       ),
     },

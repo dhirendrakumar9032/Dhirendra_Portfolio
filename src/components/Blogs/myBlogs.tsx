@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { BlogCardProps } from "./type";
+import { BlogCardProps } from "../About/type";
 
 const BlogCard: React.FC<BlogCardProps> = (props) => {
   const { title, description, readTime, imageUrl } = props;

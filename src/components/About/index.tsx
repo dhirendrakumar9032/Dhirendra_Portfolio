@@ -1,5 +1,5 @@
 import ExperienceSection from "./experience";
-import { BlogCard } from "./myBlogs";
+import { BlogCard } from "../Blogs/myBlogs";
 import { blogData, educationEntries, selfDescription } from "./data";
 import "./index.scss";
 
@@ -19,13 +19,7 @@ const About = () => {
         </div>
         <ExperienceSection entries={educationEntries} />
       </div>
-      <div className="blog-title">My Blogs</div>
-      <div className="my-blogs">
-        
-        {blogData.map((blog) => (
-          <BlogCard {...blog} />
-        ))}
-      </div>
+
     </div>
   );
 };

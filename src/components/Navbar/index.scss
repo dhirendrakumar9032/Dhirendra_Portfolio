@@ -17,27 +17,28 @@
   );
   backdrop-filter: blur(10px);
 
-  .name {
+  .name, .left-nav-container, .anticon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+  }
 
+  .name {
+    gap: 8px;
     color: #d35400;
     font-family: "Dancing Script";
     font-weight: 700;
     font-size: 38px;
+
     .logo {
-      border: 3px solid #64b280;
+      border: 3px solid $purple-color;
       width: 60px;
       height: 60px;
-      border-radius: 50px;
+      border-radius: 50%;
     }
   }
 
   .left-nav-container {
-    display: flex;
-    align-items: center;
     gap: 24px;
 
     img {
@@ -50,5 +51,22 @@
     width: 30px;
     font-size: 30px;
     color: $purple-color;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px 20px;
+    
+    .name {
+      font-size: 28px; // Smaller font size for smaller screens
+
+      .logo {
+        width: 45px; // Smaller logo size for smaller screens
+        height: 45px;
+      }
+    }
+
+    // .left-nav-container, .anticon {
+    //   display: none; // Hide on smaller screens, assuming you'll use a hamburger menu
+    // }
   }
 }
