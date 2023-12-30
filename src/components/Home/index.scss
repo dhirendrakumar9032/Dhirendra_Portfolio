@@ -1,3 +1,5 @@
+@import '../../variables';
+
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-100%);
@@ -66,7 +68,7 @@
   overflow: hidden;
 
   .separate-color {
-    color: #64b280;
+    color:$purple-color;
   }
 
   .hero {
@@ -122,15 +124,12 @@
         display: flex;
         border-radius: 8px;
         justify-content: center;
+        color: white;
         align-items: center;
+        background-image: linear-gradient(to right,$purple-color, #007bff);
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         object-fit: contain;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        :hover {
-          transform: scale(1.1);
-          cursor: pointer;
-        }
 
         svg {
           width: 18px;
@@ -149,7 +148,7 @@
             align-items: center;
             gap: 5px;
             font-size: 18px;
-            color: #64b280;
+            color: $purple-color;
         }
     }
   }

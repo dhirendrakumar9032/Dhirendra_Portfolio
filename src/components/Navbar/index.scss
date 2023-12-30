@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,21 +22,33 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-   
+
     color: #d35400;
     font-family: "Dancing Script";
     font-weight: 700;
     font-size: 38px;
     .logo {
-      border:3px solid #64B280;
+      border: 3px solid #64b280;
       width: 60px;
       height: 60px;
       border-radius: 50px;
     }
   }
 
+  .left-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+
   .anticon {
     width: 30px;
     font-size: 30px;
+    color: $purple-color;
   }
 }

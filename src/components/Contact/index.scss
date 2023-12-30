@@ -1,3 +1,5 @@
+@import "../../_variables.scss";
+
 .contact {
   padding-top: 80px;
 
@@ -15,9 +17,9 @@
   }
 
   .underline {
-    width: 50px;
+    width: 80px;
     height: 4px;
-    background-color: #00bfff;
+    background-image: linear-gradient(to right, $purple-color, #007bff);
     display: block;
     margin: 8px auto 0;
   }
@@ -26,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
     padding: 40px;
 
     .contact-info {
@@ -42,8 +45,9 @@
           text-decoration: underline;
         }
       }
-     
     }
+
+    
 
     .contact-form {
       display: flex;
@@ -54,10 +58,10 @@
       padding: 30px;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-      .form{
+      .form {
         width: 100%;
 
-        input{
+        input {
           padding: 0.5rem;
           border: 1px solid #eee;
           border-radius: 5px;
@@ -72,27 +76,40 @@
         }
       }
 
-
       h2 {
         margin-bottom: 1rem;
       }
 
       button {
         display: flex;
-        align-items: center;
         justify-content: center;
-        padding: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        background-color: #4e0eff; // Adjust the color to match your design
+        align-items: center;
+        background-image: linear-gradient(to right, $purple-color, #007bff);
         color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px; /* Adjust for more rounded corners */
+        font-weight: 600; /* Semi-bold text */
+        font-size: 16px; /* Adjust as needed */
         cursor: pointer;
-        width: 200px;
+        outline: none;
+        width: 150px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+        transition: all 0.2s ease-in-out;
+      }
 
-        &:hover {
-          background-color: darken(#4e0eff, 10%);
-        }
+    }
+    .contact-form-dark {
+      h2{
+        color: white !important;
+      }
+    
+      label{
+        color: white !important;
+      }
+    
+      input{
+        background-color: #eee;
       }
     }
   }
@@ -112,3 +129,62 @@
     }
   }
 }
+
+.footer {
+  padding: 10px 30px;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .address,
+    .phone,
+    .email {
+      margin: 5px 0;
+    }
+
+    .social-media-link {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+
+      .links {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        border-radius: 8px;
+        justify-content: center;
+        color: white;
+        align-items: center;
+        background-image: linear-gradient(to right, $purple-color, #007bff);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        object-fit: contain;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  .footer-rights {
+    margin-top: 15px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+

@@ -1,3 +1,5 @@
+@import '../../variables';
+
 // Keyframes for the floating animation
 @keyframes floatUpFromBottom {
   0% {
@@ -47,13 +49,13 @@
   cursor: pointer;
   width: 40px;
   height: 40px;
-
   font-size: 24px;
-  color: #5a398b;
+  color: $purple-color;
 
   &:hover {
-    background-color: #64b280;
+    background-image: linear-gradient(to right, $purple-color, #007bff);
     border-radius: 60px;
+    color: white;
   }
 
   .anticon {
@@ -62,7 +64,7 @@
   }
 
   &.selected {
-    background-color: #64b280;
+    background-image: linear-gradient(to right, $purple-color, #007bff);
     border-radius: 60px;
     .anticon {
       color: #1890ff;

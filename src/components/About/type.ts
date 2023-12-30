@@ -4,3 +4,10 @@ export interface ExperienceEntry {
     period: string;
     responsibilities: string[];
   }
+
+  export interface BlogCardProps {
+    title: string;
+    description: string;
+    readTime: string;
+    imageUrl: string;
+  }

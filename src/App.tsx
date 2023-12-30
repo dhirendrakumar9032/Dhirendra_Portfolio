@@ -1,4 +1,4 @@
-import React, { createContext, useRef, useState } from "react";
+import React, { createContext, useState } from "react";
 import Navbar from "./components/Navbar";
 import Navigation from "./components/Navigation";
 import { Home } from "./components/Home";
@@ -11,11 +11,15 @@ import './global.scss'
 interface NavigationContextState {
   isNavVisible: boolean;
   toggleNav: () => void;
+  isLightsEnabled?: boolean;
+  handleModes?:()=>void;
 }
 
 const defaultState: NavigationContextState = {
   isNavVisible: false,
   toggleNav: () => {},
+  isLightsEnabled:true,
+  handleModes:() =>{}
 };
 
 export const NavigationContext =
@@ -23,14 +27,20 @@ export const NavigationContext =
 
 const App = () => {
   const [isNavVisible, setNavVisible] = useState(false);
+  const [isLightsEnabled, setLightsEnabled] = useState(true);
+
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
   };
 
+  const handleModes=()=>{
+    setLightsEnabled(!isLightsEnabled)
+  }
+
   return (
-    <NavigationContext.Provider value={{ isNavVisible, toggleNav }}>
+    <NavigationContext.Provider value={{ isNavVisible, toggleNav,isLightsEnabled, handleModes }}>
       <Navbar />
-      <div className="app" >
+      <div className={`app ${isLightsEnabled? 'light-mode':'dark-mode'}`} >
         <Home />
         <About />
         <Skills/>
