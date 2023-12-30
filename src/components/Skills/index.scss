@@ -1,3 +1,5 @@
+@import '../../variables';
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -26,9 +28,9 @@
   }
 
   .underline {
-    width: 50px;
+    width: 80px;
     height: 4px;
-    background-color: #00bfff;
+    background-image: linear-gradient(to right, $purple-color, #007bff);
     display: block;
     margin: 8px auto 0;
   }

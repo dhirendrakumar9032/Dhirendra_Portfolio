@@ -15,38 +15,40 @@ import { TfiEmail } from "react-icons/tfi";
 import { VscCallOutgoing } from "react-icons/vsc";
 
 
-type socialMediaLinksType = {
+export type socialMediaLinksType = {
   link: string;
   logo: JSX.Element;
 };
 
+export const socialMediaLinks: socialMediaLinksType[] = [
+  {
+    link: "https://www.linkedin.com/in/dhirendra-kumar-9032/",
+    logo: <FaLinkedin />,
+  },
+  {
+    link: "https://www.github.com/dhirendrakumar9032",
+    logo: <VscGithub />,
+  },
+  {
+    link: "https://www.instagram.com/dhirendra9032/",
+    logo: <FaInstagram />,
+  },
+  {
+    link: "https://www.youtube.com/@dhirendrakumar90322",
+    logo: <FaYoutube />,
+  },
+  {
+    link: "https://www.medium.com/@dhirendra9032",
+    logo: <FaMediumM />,
+  },
+  {
+    link: "https://www.facebook.com/dhirendra9032",
+    logo: <FaFacebookF />,
+  },
+];
+
 const Home = () => {
-  const socialMediaLinks: socialMediaLinksType[] = [
-    {
-      link: "https://www.linkedin.com/in/dhirendra-kumar-9032/",
-      logo: <FaLinkedin />,
-    },
-    {
-      link: "https://www.github.com/dhirendrakumar9032",
-      logo: <VscGithub />,
-    },
-    {
-      link: "https://www.instagram.com/dhirendra9032/",
-      logo: <FaInstagram />,
-    },
-    {
-      link: "https://www.youtube.com/@dhirendrakumar90322",
-      logo: <FaYoutube />,
-    },
-    {
-      link: "https://www.medium.com/@dhirendra9032",
-      logo: <FaMediumM />,
-    },
-    {
-      link: "https://www.facebook.com/dhirendra9032",
-      logo: <FaFacebookF />,
-    },
-  ];
+  
 
   return (
     <div className="hero-container" id="home">

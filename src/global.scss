@@ -20,7 +20,7 @@
 }
 
 body{
-  font-family: 'Roboto'
+  font-family: 'Roboto', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -33,11 +33,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: darkgrey;
 outline: 1px solid slategrey;
 }
 
 .app{
   display: flex;
   flex-direction: column;
+  
 }
