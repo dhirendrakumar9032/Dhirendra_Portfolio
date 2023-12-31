@@ -5,9 +5,4 @@ export interface ExperienceEntry {
     responsibilities: string[];
   }
 
-  export interface BlogCardProps {
-    title: string;
-    description: string;
-    readTime: string;
-    imageUrl: string;
-  }
+ 

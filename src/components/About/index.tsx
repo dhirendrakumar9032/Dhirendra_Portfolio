@@ -1,6 +1,5 @@
 import ExperienceSection from "./experience";
-import { BlogCard } from "../Blogs/myBlogs";
-import { blogData, educationEntries, selfDescription } from "./data";
+import {  educationEntries, selfDescription } from "./data";
 import "./index.scss";
 
 const About = () => {
