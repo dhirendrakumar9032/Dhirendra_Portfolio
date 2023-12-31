@@ -1,9 +1,16 @@
 import React from "react";
 import "./index.scss";
-import { BlogCardProps } from "../About/type";
+
+ interface BlogCardProps {
+  title: string;
+  description: string;
+  readTime: string;
+  imageUrl: string;
+  url: string;
+}
 
 const BlogCard: React.FC<BlogCardProps> = (props) => {
-  const { title, description, readTime, imageUrl } = props;
+  const { title, description, readTime, imageUrl, url } = props;
   return (
     <div className="blog-card">
       <div
@@ -16,6 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = (props) => {
       </div>
       <div className="blog-read-time">
         <span>{readTime}</span>
+        <a href={url} target="_blank" rel="noreferrer">Click to read</a>
       </div>
     </div>
   );
