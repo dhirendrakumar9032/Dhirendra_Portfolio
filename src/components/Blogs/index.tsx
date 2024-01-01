@@ -1,6 +1,5 @@
-import React from "react";
 import { BlogCard } from "./myBlogs";
-import { blogData } from "../About/data";
+import { blogData } from "../../utils/data";
 
 const Blogs = () => {
   return (

@@ -1,54 +1,25 @@
-import {  Image } from "antd";
-import heroLogo from "../../resources/icons/hero-img.png";
-import "./index.scss";
-import { VscGithub } from "react-icons/vsc";
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaYoutube,
-  FaMediumM,
-  FaFacebookF,
-} from "react-icons/fa";
-
+import {  Button, Image, message } from "antd";
 import { motion } from "framer-motion";
-import { TfiEmail } from "react-icons/tfi";
 import { VscCallOutgoing } from "react-icons/vsc";
+import { TfiEmail } from "react-icons/tfi";
+import { socialMediaLinks } from "../../utils/data";
+import IconWrapper from "../../utils/IconWrapper";
+import heroLogo from "../../resources/icons/hero-img.png";
+import resume from '../../resources/dhirendra-kumar-resume.pdf';
+import "./index.scss";
 
 
-export type socialMediaLinksType = {
-  link: string;
-  logo: JSX.Element;
-};
-
-export const socialMediaLinks: socialMediaLinksType[] = [
-  {
-    link: "https://www.linkedin.com/in/dhirendra-kumar-9032/",
-    logo: <FaLinkedin />,
-  },
-  {
-    link: "https://www.github.com/dhirendrakumar9032",
-    logo: <VscGithub />,
-  },
-  {
-    link: "https://www.instagram.com/dhirendra9032/",
-    logo: <FaInstagram />,
-  },
-  {
-    link: "https://www.youtube.com/@dhirendrakumar90322",
-    logo: <FaYoutube />,
-  },
-  {
-    link: "https://www.medium.com/@dhirendra9032",
-    logo: <FaMediumM />,
-  },
-  {
-    link: "https://www.facebook.com/dhirendra9032",
-    logo: <FaFacebookF />,
-  },
-];
 
 const Home = () => {
   
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'dhirendra-kumar-resume.pdf';
+    link.click();
+    message.success('PDF Downloaded Successfully!', 3)
+  };
+
 
   return (
     <div className="hero-container" id="home">
@@ -67,7 +38,6 @@ const Home = () => {
           </span>{" "}
           crafting front-end platforms that not only foster
           <span className="separate-color">
-            {" "}
             social innovation but also prioritize sustainability.
           </span>
         </div>
@@ -84,7 +54,7 @@ const Home = () => {
               whileHover={{ y: -5, opacity: 0.8 }}
               transition={{ duration: 0.3 }}
             >
-              {logo}
+             <IconWrapper icon={logo} />
             </motion.a>
           ))}
         </div>
@@ -96,6 +66,7 @@ const Home = () => {
             <VscCallOutgoing />
             +91, 8604390422
           </div>
+          <Button type="primary" onClick={handleDownload}>Hire me</Button>
         </div>
       </section>
       <section className="hero-image-container">

@@ -1,4 +1,25 @@
-import { ExperienceEntry } from "./type";
+import { ExperienceEntry, SkillsType, socialMediaLinksType } from "./types";
+import { VscGithub } from "react-icons/vsc";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaYoutube,
+  FaMediumM,
+  FaFacebookF,
+} from "react-icons/fa";
+import react from "../resources/skills-icons/react.svg";
+import js from "../resources/skills-icons/jss.png";
+import css from "../resources/skills-icons/css.png";
+import java from "../resources/skills-icons/java.png";
+import html from "../resources/skills-icons/html.png";
+import ts from "../resources/skills-icons/ts.png";
+import redux from "../resources/skills-icons/redux.png";
+import git from "../resources/skills-icons/git.png";
+import tailwind from "../resources/skills-icons/tailwind.png";
+import nextjs from "../resources/skills-icons/nextjs.png";
+import antd from "../resources/skills-icons/antd.png";
+import sass from "../resources/skills-icons/sass.png";
+import postman from "../resources/skills-icons/postman.png";
 
 export const educationEntries: ExperienceEntry[] = [
     {
@@ -45,3 +66,49 @@ export const educationEntries: ExperienceEntry[] = [
   highlight my dedication to creating impactful user experiences in
   the fintech sector. I'm excited about new challenges and
   collaborations that push the boundaries of frontend development.`
+
+
+  export const socialMediaLinks: socialMediaLinksType[] = [
+    {
+      link: "https://www.linkedin.com/in/dhirendra-kumar-9032/",
+      logo: FaLinkedin ,
+    },
+    {
+      link: "https://www.github.com/dhirendrakumar9032",
+      logo: VscGithub ,
+    },
+    {
+      link: "https://www.instagram.com/dhirendra9032/",
+      logo: FaInstagram,
+    },
+    {
+      link: "https://www.youtube.com/@dhirendrakumar90322",
+      logo: FaYoutube,
+    },
+    {
+      link: "https://www.medium.com/@dhirendra9032",
+      logo: FaMediumM,
+    },
+    {
+      link: "https://www.facebook.com/dhirendra9032",
+      logo: FaFacebookF,
+    },
+  ];
+  
+
+  export const  skills:SkillsType[] = [
+    { icon: react, name: "React JS" },
+    { icon: js, name: "Javascript" },
+    { icon: html, name: "HTML5" },
+    { icon: css, name: "CSS3" },
+    { icon: ts, name: "Typescript" },
+    { icon: redux, name: "Redux" },
+    { icon: nextjs, name: "Next JS" },
+    { icon: git, name: "Github" },
+    { icon: tailwind, name: "Tailwind" },
+    { icon: java, name: "Java" },
+    { icon: sass, name: "Sass" },
+    { icon: antd, name: "Ant Design" },
+    { icon: postman, name: "Postman" },
+
+  ];

@@ -1,5 +1,5 @@
 import ExperienceSection from "./experience";
-import {  educationEntries, selfDescription } from "./data";
+import {  educationEntries, selfDescription } from "../../utils/data";
 import "./index.scss";
 
 const About = () => {
