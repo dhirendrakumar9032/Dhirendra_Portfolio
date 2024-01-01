@@ -88,13 +88,13 @@
         color: white;
         padding: 10px 25px;
         border: none;
-        border-radius: 5px; /* Adjust for more rounded corners */
-        font-weight: 600; /* Semi-bold text */
-        font-size: 16px; /* Adjust as needed */
+        border-radius: 5px; 
+        font-weight: 600; 
+        font-size: 16px; 
         cursor: pointer;
         outline: none;
         width: 150px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
         transition: all 0.2s ease-in-out;
       }
 
@@ -154,6 +154,9 @@
     .address,
     .phone,
     .email {
+      display: flex;
+      align-items: center;
+      gap: 5px;
       margin: 5px 0;
     }
 

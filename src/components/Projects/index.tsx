@@ -1,12 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Carousel } from "antd";
-import "swiper/css";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 import "swiper/css/effect-cards";
 import { projects, ProjectType } from './projectsData'; 
+import "swiper/css";
 import "./index.scss";
 
 const Projects = () => {
+
   const renderProjectCard = (project: ProjectType) => (
     <SwiperSlide key={project.id}>
       <div className="card">

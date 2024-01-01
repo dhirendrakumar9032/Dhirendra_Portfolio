@@ -1,15 +1,8 @@
-import React from "react";
+import {FC} from "react";
+import { BlogCardProps } from "../../utils/types";
 import "./index.scss";
 
- interface BlogCardProps {
-  title: string;
-  description: string;
-  readTime: string;
-  imageUrl: string;
-  url: string;
-}
-
-const BlogCard: React.FC<BlogCardProps> = (props) => {
+const BlogCard:FC<BlogCardProps> = (props) => {
   const { title, description, readTime, imageUrl, url } = props;
   return (
     <div className="blog-card">

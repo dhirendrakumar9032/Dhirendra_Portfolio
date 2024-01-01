@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { ExperienceEntry } from "./type";
+import { ExperienceEntry } from "../../utils/types";
 
 const ExperienceEntryComponent: React.FC<ExperienceEntry> = ({
   role,

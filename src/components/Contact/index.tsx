@@ -2,19 +2,10 @@ import { useContext, useState } from "react";
 import { Button, Form, Image, Input, Spin, message } from "antd";
 import contact from "../../resources/icons/contact.svg";
 import { sendEmail } from "./emailService";
-import "./index.scss";
-import { socialMediaLinks } from "../Home";
-import { motion } from "framer-motion";
-import { IoLocationOutline } from "react-icons/io5";
-import { VscCallOutgoing } from "react-icons/vsc";
-import { TfiEmail } from "react-icons/tfi";
 import { NavigationContext } from "../../App";
-
-type ContactFormValues = {
-  fullName: string;
-  email: string;
-  message?: string;
-};
+import { ContactFormValues } from "../../utils/types";
+import Footer from "./Footer";
+import "./index.scss";
 
 const Contact = () => {
   const [form] = Form.useForm();
@@ -108,41 +99,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <footer className="footer">
-        <div className="footer-content">
-          <div>
-            <p className="address">
-              <IoLocationOutline /> Kondapur,Hyderabad, Telanagan, 500081
-            </p>
-            <p className="phone">
-              <VscCallOutgoing /> (+91) 8604390422
-            </p>
-            <p className="email">
-              <TfiEmail /> dhirendra9032@gmail.com
-            </p>
-          </div>
-          <div className="social-media-link">
-            {socialMediaLinks.map(({ link, logo }, index) => (
-              <motion.a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-                className="links"
-                initial={{ y: 5, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                whileHover={{ y: -5, opacity: 0.8 }}
-                transition={{ duration: 0.3 }}
-              >
-                {logo}
-              </motion.a>
-            ))}
-          </div>
-        </div>
-        <div className="footer-rights">
-          <p>© 2023 by Dhirendra Kumar. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 };

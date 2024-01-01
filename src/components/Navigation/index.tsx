@@ -8,11 +8,12 @@ import { RiComputerFill } from "react-icons/ri";
 import { FaBloggerB } from "react-icons/fa";
 import { NavigationContext } from "../../App";
 import "./index.scss";
+import { NaveItems } from "../../utils/types";
 
 const Navigation = () => {
   const { isNavVisible } = useContext(NavigationContext);
 
-  const navItems = [
+  const navItems:NaveItems[] = [
     {
       id: "home",
       icon: (
