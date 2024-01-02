@@ -3,14 +3,12 @@
 @import './mixins';
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
 
-// Default to light theme
 
 *{
   margin: 0;
   padding: 0;
 }
 
-// Dark theme class
 .dark-mode {
   @include apply-theme($dark-theme);
   
@@ -18,12 +16,10 @@
 
 .light-mode {
   @include apply-theme($light-theme);
-  transition: background-color 0.5s ease;
 }
 
 body{
   font-family: 'Roboto', sans-serif;
-  transition: background-color 0.5s ease;
 }
 
 body::-webkit-scrollbar {
@@ -42,5 +38,7 @@ outline: 1px solid slategrey;
 .app{
   display: flex;
   flex-direction: column;
+  transition: background-color 1.9s ease;
+
   
 }

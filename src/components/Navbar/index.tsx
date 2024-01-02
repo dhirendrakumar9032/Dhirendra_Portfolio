@@ -25,7 +25,7 @@ const Navbar = () => {
         <span>Dhirendra Kumar</span>
       </div>
       <div className="left-nav-container">
-        {isLightsEnabled?<img  src={moon} alt="sun" onClick={handleModes} />:<img src={sun} alt="moon" onClick={handleModes}/>}
+        {isLightsEnabled?<img className="mode-btn"  src={moon} alt="sun" onClick={handleModes} />:<img src={sun} alt="moon" onClick={handleModes}/>}
         {isNavVisible ? (
           <CloseOutlined className="hamburg" onClick={toggleNav} />
         ) : (
