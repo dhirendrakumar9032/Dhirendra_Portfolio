@@ -13,14 +13,17 @@
 // Dark theme class
 .dark-mode {
   @include apply-theme($dark-theme);
+  
 }
 
 .light-mode {
   @include apply-theme($light-theme);
+  transition: background-color 0.5s ease;
 }
 
 body{
   font-family: 'Roboto', sans-serif;
+  transition: background-color 0.5s ease;
 }
 
 body::-webkit-scrollbar {
