@@ -1,5 +1,15 @@
 @import "../../variables";
 
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-20px); 
+  }
+}
+
 .projects {
   padding-top: 80px;
   margin-bottom: 80px;
@@ -42,8 +52,24 @@
       padding: 20px;
       color: white;
 
-      h1 {
-        font-size: 1.5rem;
+      .project-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .swipe-left {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+
+          .left-arrow{
+            animation: moveLeft 0.8s infinite alternate;
+          }
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
       }
 
       p {
@@ -97,11 +123,11 @@
 
             &:hover {
               background-color: #1c1e21;
+            }
           }
         }
       }
     }
-  }
 
     .imageSection {
       height: 340px;
