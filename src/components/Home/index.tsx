@@ -1,17 +1,17 @@
-import {  Button, Image, message } from "antd";
+import { Button, Image, message } from "antd";
 import { motion } from "framer-motion";
 import { VscCallOutgoing } from "react-icons/vsc";
 import { TfiEmail } from "react-icons/tfi";
 import { socialMediaLinks } from "../../utils/data";
 import IconWrapper from "../../utils/IconWrapper";
 import heroLogo from "../../resources/icons/hero-img.png";
-import resume from '../../resources/dhirendra-kumar-resume.pdf';
+import resume from "../../resources/dhirendra-kumar-resume.pdf";
 import "./index.scss";
-
+import { Link } from "react-scroll";
+import { IoMdDownload } from "react-icons/io";
 
 
 const Home = () => {
-  
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resume;
@@ -19,7 +19,6 @@ const Home = () => {
     link.click();
     message.success('PDF Downloaded Successfully!', 3)
   };
-
 
   return (
     <div className="hero-container" id="home">
@@ -54,7 +53,7 @@ const Home = () => {
               whileHover={{ y: -5, opacity: 0.8 }}
               transition={{ duration: 0.3 }}
             >
-             <IconWrapper icon={logo} />
+              <IconWrapper icon={logo} />
             </motion.a>
           ))}
         </div>
@@ -66,7 +65,16 @@ const Home = () => {
             <VscCallOutgoing />
             +91, 8604390422
           </div>
-          <Button type="primary" onClick={handleDownload}>Hire me</Button>
+          <div className="download-btn">
+            <Link to="contact" smooth={true} duration={500}>
+              <Button type="primary">
+                Hire me
+              </Button>
+            </Link>
+            <Button type="primary" onClick={handleDownload}>
+              <IoMdDownload style={{ height: "20px", width: "20px" }}/> Resume
+            </Button>
+          </div>
         </div>
       </section>
       <section className="hero-image-container">

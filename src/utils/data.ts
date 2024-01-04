@@ -89,10 +89,6 @@ export const educationEntries: ExperienceEntry[] = [
       link: "https://www.medium.com/@dhirendra9032",
       logo: FaMediumM,
     },
-    {
-      link: "https://www.facebook.com/dhirendra9032",
-      logo: FaFacebookF,
-    },
   ];
   
 
