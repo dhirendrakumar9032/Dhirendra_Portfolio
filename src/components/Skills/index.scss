@@ -77,3 +77,26 @@
     }
   }
 }
+
+/* Media Queries for Responsive Design */
+
+
+@media screen and (max-width: 768px) {
+  .skills {
+    .skill-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 20px;
+      
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .skills {
+    .skill-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-gap: 20px;
+    }
+  }
+}
+
