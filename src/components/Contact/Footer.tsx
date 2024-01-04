@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
       <div className="footer-content">
         <div>
           <p className="address">
-            <IoLocationOutline /> Kondapur,Hyderabad, Telanagan, 500081
+            <IoLocationOutline /> Kondapur,Hyderabad, Telanagan.
           </p>
           <p className="phone">
             <VscCallOutgoing /> (+91) 8604390422

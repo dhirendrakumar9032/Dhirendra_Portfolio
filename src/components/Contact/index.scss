@@ -148,6 +148,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
+    gap: 15px;
     justify-content: space-between;
     width: 100%;
 
@@ -183,6 +184,10 @@
           width: 18px;
           height: 18px;
         }
+      }
+
+      @media (max-width:568px) {
+        justify-content: start;
       }
     }
   }
