@@ -2,13 +2,13 @@
 
 .about-container {
   padding-top: 80px;
-  
+
   .heading-container {
     text-align: center;
     font-family: Arial, sans-serif;
   }
 
-  .blog-title{
+  .blog-title {
     font-size: 20px;
     text-align: center;
     font-weight: 700;
@@ -43,7 +43,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-
   }
 
   .about-logo {
@@ -72,7 +71,6 @@
   }
 
   @media (max-width: 768px) {
-
     padding-top: 0;
 
     .about-main {
@@ -115,6 +113,24 @@
           width: 3px;
           background-image: linear-gradient(to right, $purple-color, #007bff);
           height: 350px;
+
+          @media (max-width: 768px) {
+            height: 370px;
+          }
+            @media (max-width: 414px) {
+              height: 600px;
+            }
+
+            @media (max-width: 390px) {
+              height: 650px;
+            }
+
+          @media (max-width: 375px) {
+            height: 690px;
+          }
+          @media (max-width: 320px) {
+            height: 730px;
+          }
         }
       }
 
@@ -150,5 +166,3 @@
     }
   }
 }
-
-
