@@ -57,7 +57,7 @@
         color: #fff;
         padding: 4px 8px;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 1rem;
         text-transform: uppercase;
       }
     }
@@ -66,12 +66,12 @@
       padding: 0 16px;
       .blog-title {
         margin: 8px 0;
-        font-size: 20px;
+        font-size: 1.2rem;
         font-weight: bold;
       }
 
       .blog-description {
-        font-size: 14px;
+        font-size: 1rem;
       }
     }
   }
@@ -80,5 +80,9 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 10px 20px;
+  }
+
+  @media (max-width:520px) {
+     padding: 20px 10px;
   }
 }
