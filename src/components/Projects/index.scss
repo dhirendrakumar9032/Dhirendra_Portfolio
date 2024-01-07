@@ -6,7 +6,7 @@
   }
 
   100% {
-    transform: translateX(-20px); 
+    transform: translateX(-20px);
   }
 }
 
@@ -62,7 +62,7 @@
           align-items: center;
           font-weight: bold;
 
-          .left-arrow{
+          .left-arrow {
             animation: moveLeft 0.8s infinite alternate;
           }
         }
@@ -87,8 +87,9 @@
           .tech-pill {
             display: flex;
             justify-content: center;
-            background-image: linear-gradient(to right, $purple-color, #007bff);
-            color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            color: #0a0a0a;
+            background-color: $light-theme-background;
             border-radius: 15px;
             padding: 5px 10px;
             margin: 5px;
@@ -153,5 +154,87 @@
 @media (max-width: 768px) {
   .swiper {
     width: 50%;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-details {
+  padding: 16px;
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .card-description {
+    color: #555;
+    margin-bottom: 16px;
+  }
+
+  .tech-stack {
+    margin-bottom: 16px;
+
+    strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      li {
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        font-size: 12px;
+        font-family: Roboto, "sans serif";
+        height: 30px;
+      }
+    }
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+
+    a {
+      text-align: center;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:first-child {
+        background-image: linear-gradient(to right, $purple-color, #007bff);
+      }
+
+      &:last-child {
+        background-image: linear-gradient(to right, #3e3c5f, #105196);
+      }
+    }
   }
 }
