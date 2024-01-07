@@ -15,13 +15,12 @@ const Projects = () => {
 
   useEffect(() => {
     const handleResize = debounce(() => {
-      if (window.innerWidth <= 768) {
-        setScreenWidth(true);
-      }else{
-        setScreenWidth(false);
-      }
+      setScreenWidth(window.innerWidth <= 768);
     }, 200);
+
+    handleResize(); // Call it once to set the initial state
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -69,10 +68,9 @@ const Projects = () => {
       </div>
       <Carousel autoplay autoplaySpeed={3000}>
         {project.projectImgLinks.map((link) => (
-          <div className="imageSection">
+          <div className="imageSection" key={link}>
             <img
               src={link}
-              key={link}
               alt="Project background"
               className="backgroundImage"
             />
@@ -88,7 +86,7 @@ const Projects = () => {
         <h2 className="heading">Projects</h2>
         <span className="underline"></span>
       </div>
-      {!screenWidth && (
+      {!screenWidth ? (
         <Swiper
           effect={"cards"}
           grabCursor={true}
@@ -98,11 +96,10 @@ const Projects = () => {
         >
           {projects.map(renderProjectCard)}
         </Swiper>
-      )}
-      {screenWidth && (
+      ) : (
         <Carousel autoplay autoplaySpeed={3000}>
           {projects.map((project) => (
-            <CardComponent {...project} />
+            <CardComponent key={project.id} {...project} />
           ))}
         </Carousel>
       )}
