@@ -5,7 +5,7 @@ export interface ProjectType {
   id: number;
   projectImgLinks: string[];
   liveDemoUrl?: string;
-  githubUrl?: string;
+  githubUrl: string;
 }
 
 export const projects: ProjectType[] = [
@@ -28,6 +28,7 @@ export const projects: ProjectType[] = [
       "https://i.imgur.com/qMP0ckA.png",
       "https://i.imgur.com/FH62HtN.png",
     ],
+    liveDemoUrl:'https://dhirendra-portfolio.vercel.app/',
     githubUrl: "https://github.com/dhirendrakumar9032/dhirendra_portfolio",
   },
   {

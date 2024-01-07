@@ -1,13 +1,32 @@
+import { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
+import { debounce } from "lodash";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { ProjectType, projects } from "../Projects/projectsData";
 import leftArrow from "../../resources/icons/left-arrow.png";
+import { CardComponent } from "./ProjectCard";
 import "./index.scss";
 
 const Projects = () => {
+  const [screenWidth, setScreenWidth] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      if (window.innerWidth <= 768) {
+        setScreenWidth(true);
+      }else{
+        setScreenWidth(false);
+      }
+    }, 200);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const renderProjectCard = (project: ProjectType) => (
     <SwiperSlide key={project.id}>
       <div className="infoSection">
@@ -69,15 +88,24 @@ const Projects = () => {
         <h2 className="heading">Projects</h2>
         <span className="underline"></span>
       </div>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-        loop={true}
-      >
-        {projects.map(renderProjectCard)}
-      </Swiper>
+      {!screenWidth && (
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper"
+          loop={true}
+        >
+          {projects.map(renderProjectCard)}
+        </Swiper>
+      )}
+      {screenWidth && (
+        <Carousel autoplay autoplaySpeed={3000}>
+          {projects.map((project) => (
+            <CardComponent {...project} />
+          ))}
+        </Carousel>
+      )}
     </div>
   );
 };
