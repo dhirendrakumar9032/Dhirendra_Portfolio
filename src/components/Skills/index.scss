@@ -78,11 +78,10 @@
   }
 }
 
-/* Media Queries for Responsive Design */
-
 
 @media screen and (max-width: 768px) {
   .skills {
+    padding-top: 60px;
     .skill-grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-gap: 20px;

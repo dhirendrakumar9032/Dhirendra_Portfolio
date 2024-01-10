@@ -12,7 +12,6 @@
 
 .projects {
   padding-top: 80px;
-  margin-bottom: 80px;
 
   .heading-container {
     text-align: center;
@@ -150,8 +149,11 @@
   }
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
+  .projects {
+    padding-top: 60px;
+  }
+
   .swiper {
     width: 50%;
   }

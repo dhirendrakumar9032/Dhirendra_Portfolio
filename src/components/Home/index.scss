@@ -200,11 +200,13 @@
   }
 
   @media (max-width: 768px) {
-    padding-top: 20px;
+    padding-top: 80px;
+    padding-bottom: 40px;
     gap: 20px;
+    height: auto;
 
     .hero {
-      padding: 0 20px;
+      padding: 0 ;
       .hero-greeting {
         font-size: 2.5rem;
       }
