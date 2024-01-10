@@ -22,6 +22,11 @@
     display: block;
     margin: 8px auto 0;
   }
+
+  @media (max-width:768px) {
+    padding-top: 10px;
+  }
+
 }
 .my-blogs {
   display: grid;
