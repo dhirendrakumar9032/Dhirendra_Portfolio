@@ -10,7 +10,6 @@ import {
 import react from "../resources/skills-icons/react.svg";
 import js from "../resources/skills-icons/jss.png";
 import css from "../resources/skills-icons/css.png";
-import java from "../resources/skills-icons/java.png";
 import html from "../resources/skills-icons/html.png";
 import ts from "../resources/skills-icons/ts.png";
 import redux from "../resources/skills-icons/redux.png";
@@ -102,7 +101,6 @@ export const educationEntries: ExperienceEntry[] = [
     { icon: nextjs, name: "Next JS" },
     { icon: git, name: "Github" },
     { icon: tailwind, name: "Tailwind" },
-    { icon: java, name: "Java" },
     { icon: sass, name: "Sass" },
     { icon: antd, name: "Ant Design" },
     { icon: postman, name: "Postman" },
