@@ -9,8 +9,8 @@ const Blogs = () => {
         <span className="underline"></span>
       </div>
       <div className="my-blogs">
-      {blogData.map((blog) => (
-        <BlogCard {...blog} />
+      {blogData.map((blog,index) => (
+        <BlogCard key={index} {...blog} />
       ))}
       </div>
     </div>

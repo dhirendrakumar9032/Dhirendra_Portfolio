@@ -5,7 +5,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { socialMediaLinks } from "../../utils/data";
 import IconWrapper from "../../utils/IconWrapper";
 import heroLogo from "../../resources/icons/hero-img.png";
-import resume from "../../resources/dhirendra-kumar-resume.pdf";
+import resume from '../../resources/dhirendra_kumar_resume.pdf'
 import "./index.scss";
 import { Link } from "react-scroll";
 import { IoMdDownload } from "react-icons/io";
@@ -17,7 +17,7 @@ const Home = () => {
     link.href = resume;
     link.download = 'dhirendra-kumar-resume.pdf';
     link.click();
-    message.success('PDF Downloaded Successfully!', 3)
+    message.success('Resume Downloaded Successfully!', 3)
   };
 
   return (

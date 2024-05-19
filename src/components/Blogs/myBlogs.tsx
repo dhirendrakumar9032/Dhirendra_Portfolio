@@ -5,7 +5,7 @@ import "./index.scss";
 const BlogCard:FC<BlogCardProps> = (props) => {
   const { title, description, readTime, imageUrl, url } = props;
   return (
-    <div className="blog-card">
+    <div className="blog-card" >
       <div
         className="blog-image"
         style={{ backgroundImage: `url(${imageUrl})` }}
