@@ -61,8 +61,6 @@ export const projects: ProjectType[] = [
       "Framer Motion",
       "Swiper",
       "SCSS",
-      "Framer Motion",
-      "Swiper",
       "Ant Design",
     ],
     id: 2,
