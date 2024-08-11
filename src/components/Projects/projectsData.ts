@@ -10,6 +10,27 @@ export interface ProjectType {
 
 export const projects: ProjectType[] = [
   {
+    title: "Job Application Email Generator",
+    description:
+      "The primary purpose of this application is to address the common problem of having to write job application emails from scratch each time. Whether you need to ask an HR representative for a referral or reach out to an employee",
+    technology: [
+      "React",
+      "TypeScript",
+      "SCSS",
+      "Zustand",
+      "Ant Design"
+     
+    ],
+    id: 5,
+    projectImgLinks: [
+      "https://github.com/user-attachments/assets/0ad388b1-75bb-4f0c-98a2-043507cebe47",
+      "https://github.com/user-attachments/assets/d1a06ac3-7e75-470b-a524-6140ffb809d0",
+    ],
+    liveDemoUrl:'https://job-application-mail-generator.vercel.app/',
+    githubUrl: "https://github.com/dhirendrakumar9032/job_application_mail_generator",
+  },
+
+  {
     title: "Admin UI GeekTrust Challenge",
     description:
       "The Admin UI Geektrust Project is a user management system that provides functionalities for searching, editing, deleting, and paginating user records. The project leverages various modern web development technologies to deliver a responsive and user-friendly interface.",
