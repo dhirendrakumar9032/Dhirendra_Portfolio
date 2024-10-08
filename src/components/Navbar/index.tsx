@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="name">
         <img className="logo" src={logo} alt="logo" />
-        <span>Dhirendra Kumar</span>
+        <span>My Portfolio</span>
       </div>
       <div className="left-nav-container">
         {isLightsEnabled?<img className="mode-btn"  src={moon} alt="sun" onClick={handleModes} />:<img src={sun} alt="moon" onClick={handleModes}/>}
