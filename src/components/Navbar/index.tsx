@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { NavigationContext } from "../../App";
-import logo from "../../resources/icons/logo.jpg";
+import logo from "../../resources/icons/logo.png";
 import sun from "../../resources/icons/sun.png";
 import moon from "../../resources/icons/moon.png";
 import "./index.scss";

@@ -4,7 +4,7 @@ import { VscCallOutgoing } from "react-icons/vsc";
 import { TfiEmail } from "react-icons/tfi";
 import { socialMediaLinks } from "../../utils/data";
 import IconWrapper from "../../utils/IconWrapper";
-import heroLogo from "../../resources/icons/hero-img.png";
+import heroLogo from "../../resources/icons/hero-img.webp";
 import resume from '../../resources/dhirendra_kumar_resume.pdf'
 import "./index.scss";
 import { Link } from "react-scroll";
