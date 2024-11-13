@@ -10,6 +10,25 @@ export interface ProjectType {
 
 export const projects: ProjectType[] = [
   {
+    title: "Movie Verse",
+    description:
+      "MovieVerse, the ultimate destination for discovering and exploring movies! This web application allows users to browse a vast collection of movies, view detailed information about each title, and search for their favorite films.",
+    technology: [
+      "React",
+      "TypeScript",
+      "SCSS",
+      "Vite",
+     
+    ],
+    id: 6,
+    projectImgLinks: [
+      "https://github.com/user-attachments/assets/f9a7d0a3-a6c2-4c38-9432-3b424f22d159",
+      "https://github.com/user-attachments/assets/3f134073-e87a-4786-86ad-9c4e9ba2b623",
+    ],
+    liveDemoUrl:'https://movie-verse-tan.vercel.app/',
+    githubUrl: "https://github.com/dhirendrakumar9032/MovieVerse",
+  },
+  {
     title: "Job Application Email Generator",
     description:
       "The primary purpose of this application is to address the common problem of having to write job application emails from scratch each time. Whether you need to ask an HR representative for a referral or reach out to an employee",
