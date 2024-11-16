@@ -2,6 +2,7 @@
 import React from 'react';
 import { ProjectType } from './projectsData';
 import './index.scss';
+import { Github, Link } from 'lucide-react';
 
 const CardComponent: React.FC<ProjectType> = ({
   projectImgLinks,
@@ -27,9 +28,11 @@ const CardComponent: React.FC<ProjectType> = ({
         </div>
         <div className="buttons">
           <a href={liveDemoUrl} target="_blank" rel="noopener noreferrer">
+            <Link />
             Live Demo
           </a>
           <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+          <Github />
             GitHub
           </a>
         </div>

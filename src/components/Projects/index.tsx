@@ -9,6 +9,7 @@ import { ProjectType, projects } from "../Projects/projectsData";
 import leftArrow from "../../resources/icons/left-arrow.png";
 import { CardComponent } from "./ProjectCard";
 import "./index.scss";
+import { Github, Link } from "lucide-react";
 
 const Projects = () => {
   const [screenWidth, setScreenWidth] = useState<boolean>(false);
@@ -54,6 +55,7 @@ const Projects = () => {
             rel="noreferrer"
             className="button liveDemoButton"
           >
+            <Link />
             Live Demo
           </a>
           <a
@@ -62,11 +64,12 @@ const Projects = () => {
             rel="noreferrer"
             className="button githubButton"
           >
+            <Github />
             GitHub Repo
           </a>
         </div>
       </div>
-      
+
       <div className="imageSection">
         {project.projectImgLinks.map((link) => (
           <div className="images" key={link}>

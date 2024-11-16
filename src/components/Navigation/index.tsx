@@ -1,14 +1,10 @@
 import { useContext } from "react";
 import { Link } from "react-scroll";
 import { FaHome } from "react-icons/fa";
-import { BiSolidContact } from "react-icons/bi";
-import { IoPersonSharp } from "react-icons/io5";
-import { FaTools } from "react-icons/fa";
-import { RiComputerFill } from "react-icons/ri";
-import { FaBloggerB } from "react-icons/fa";
 import { NavigationContext } from "../../App";
 import "./index.scss";
 import { NaveItems } from "../../utils/types";
+import { BriefcaseBusiness, CircleUserRound, Contact, LampDesk, NotebookPen } from "lucide-react";
 
 const Navigation = () => {
   const { isNavVisible } = useContext(NavigationContext);
@@ -26,7 +22,7 @@ const Navigation = () => {
       id: "about",
       icon: (
         <Link to="about" smooth={true} duration={500}>
-          <IoPersonSharp />
+          <CircleUserRound />
         </Link>
       ),
     },
@@ -34,7 +30,7 @@ const Navigation = () => {
       id: "skills",
       icon: (
         <Link to="skills" smooth={true} duration={500}>
-          <FaTools />
+           <LampDesk />
         </Link>
       ),
     },
@@ -42,7 +38,7 @@ const Navigation = () => {
       id: "projects",
       icon: (
         <Link to="projects" smooth={true} duration={500}>
-          <RiComputerFill />
+           <BriefcaseBusiness />
         </Link>
       ),
     },
@@ -50,7 +46,7 @@ const Navigation = () => {
       id: "blogs",
       icon: (
         <Link to="blogs" smooth={true} duration={500}>
-          <FaBloggerB />
+           <NotebookPen />
         </Link>
       ),
     },
@@ -58,7 +54,7 @@ const Navigation = () => {
       id: "contact",
       icon: (
         <Link to="contact" smooth={true} duration={500}>
-          <BiSolidContact />
+          <Contact />
         </Link>
       ),
     },

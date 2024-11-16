@@ -109,10 +109,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          gap:8px;
           text-decoration: none;
           height: 40px;
           border-radius: 5px;
           color: #fff;
+          font-size: 14px !important;
           font-weight: bold;
           text-align: center;
           background-image: linear-gradient(to right, $purple-color, #007bff);
@@ -243,6 +245,9 @@
       color: #fff;
       border-radius: 4px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
 
       &:first-child {
         background-image: linear-gradient(to right, $purple-color, #007bff);
