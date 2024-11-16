@@ -38,7 +38,7 @@ const Projects = () => {
         </div>
         <p className="project-description">{project.description}</p>
         <div className="technologySection">
-          <h3>Tech-Stack</h3>
+          <h3>Tech-Stack :</h3>
           <div className="tech-stack">
             {project.technology.map((tech, idx) => (
               <span key={idx} className="tech-pill">
@@ -66,9 +66,10 @@ const Projects = () => {
           </a>
         </div>
       </div>
-      <Carousel autoplay autoplaySpeed={3000}>
+      
+      <div className="imageSection">
         {project.projectImgLinks.map((link) => (
-          <div className="imageSection" key={link}>
+          <div className="images" key={link}>
             <img
               src={link}
               alt="Project background"
@@ -76,7 +77,7 @@ const Projects = () => {
             />
           </div>
         ))}
-      </Carousel>
+      </div>
     </SwiperSlide>
   );
 

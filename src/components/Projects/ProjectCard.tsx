@@ -18,7 +18,7 @@ const CardComponent: React.FC<ProjectType> = ({
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
         <div className="tech-stack">
-          <strong>Technology Stack:</strong>
+          <strong>Technology Stack</strong>
           <ul>
             {technology.map((tech, index) => (
               <li key={index}>{tech}</li>

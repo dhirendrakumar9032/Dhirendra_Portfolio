@@ -9,6 +9,7 @@ export interface ProjectType {
 }
 
 export const projects: ProjectType[] = [
+  
   {
     title: "Movie Verse",
     description:
@@ -22,11 +23,23 @@ export const projects: ProjectType[] = [
     ],
     id: 6,
     projectImgLinks: [
-      "https://github.com/user-attachments/assets/f9a7d0a3-a6c2-4c38-9432-3b424f22d159",
-      "https://github.com/user-attachments/assets/3f134073-e87a-4786-86ad-9c4e9ba2b623",
+      "https://github.com/user-attachments/assets/a4e5a114-be7f-49a2-bae1-b91d4f04faf0",
+      "https://github.com/user-attachments/assets/ccf12d84-6c1b-44b9-a610-f5a06fec8316",
     ],
     liveDemoUrl:'https://movie-verse-tan.vercel.app/',
     githubUrl: "https://github.com/dhirendrakumar9032/MovieVerse",
+  },
+  {
+    title: "Zomato Clone",
+    description:
+      "Built a Zomato clone using React, TypeScript, and Tailwind CSS, replicating key features such as restaurant listings, search, and menu browsing. The project emphasizes a responsive design and efficient data handling for a seamless user experience.",
+    technology: ["ReactJS", "Typescript", "Tailwind", "Vite"],
+    id: 4,
+    projectImgLinks: [
+      "https://github.com/user-attachments/assets/864b0064-83ed-46c7-9170-02142e8b68d5",
+      "https://github.com/user-attachments/assets/daab0db3-58e1-4d91-962e-b18620499267",
+    ],
+    githubUrl:'https://github.com/dhirendrakumar9032/Zomato_Clone'
   },
   {
     title: "Job Application Email Generator",
@@ -35,15 +48,14 @@ export const projects: ProjectType[] = [
     technology: [
       "React",
       "TypeScript",
-      "SCSS",
-      "Zustand",
-      "Ant Design"
+      "Tailwind",
+      "Vite",
      
     ],
     id: 5,
     projectImgLinks: [
-      "https://github.com/user-attachments/assets/0ad388b1-75bb-4f0c-98a2-043507cebe47",
-      "https://github.com/user-attachments/assets/d1a06ac3-7e75-470b-a524-6140ffb809d0",
+      "https://github.com/user-attachments/assets/c003cb80-02e1-4550-80ab-449281d57a09",
+      "https://github.com/user-attachments/assets/62140916-52e9-4687-ba5b-78cc0ca423cd",
     ],
     liveDemoUrl:'https://job-application-mail-generator.vercel.app/',
     githubUrl: "https://github.com/dhirendrakumar9032/job_application_mail_generator",
@@ -65,7 +77,6 @@ export const projects: ProjectType[] = [
     projectImgLinks: [
       "https://i.imgur.com/dbv6Ifw.png",
       "https://imgur.com/dbv6Ifw.png",
-      "https://imgur.com/i6MIojM.png"
     ],
     liveDemoUrl:'https://admin-ui-geektrust-project-june-2024.vercel.app/',
     githubUrl: "https://github.com/dhirendrakumar9032/admin-ui-geektrust-project-june-2024.git",
@@ -89,30 +100,7 @@ export const projects: ProjectType[] = [
     ],
     liveDemoUrl:'https://dhirendra-portfolio.vercel.app/',
     githubUrl: "https://github.com/dhirendrakumar9032/dhirendra_portfolio",
-  },
-  {
-    title: "KanBan Board",
-    description:
-      `This project is a Kanban dashboard created with Next.js and TypeScript, styled using Tailwind CSS. It features a dark-themed UI with columns for tasks categorized as "Todo," "Work in progress," and "Done," each column containing task cards. Users can add tasks to each column and potentially move them between columns to track the progress of their work. `,
-    technology: ["Next js", "TypeScript", "Tailwind", "SCSS"],
-    id: 3,
-    projectImgLinks: [
-      "https://i.imgur.com/kUTxxCv.png",
-      "https://i.imgur.com/5dfifg8.png",
-    ],
-    githubUrl:'https://github.com/dhirendrakumar9032/Kanban_Board'
-  },
-  {
-    title: "Food Junction",
-    description:
-      "This project is an HTML, CSS, and JavaScript-based recipe website, featuring a colorful design and interactive elements. It showcases a curated selection of Indian dishes, complete with high-quality images and names. Users can search for recipes, with highlighted daily specials and latest additions, promoting an engaging culinary exploration.",
-    technology: ["HTML", "CSs", "Javascript"],
-    id: 4,
-    projectImgLinks: [
-      "https://i.imgur.com/PTD6fs8.png",
-      "https://i.imgur.com/uTn41Aw.png",
-      "https://i.imgur.com/f4qN4XQ.png"
-    ],
-    githubUrl:'https://github.com/dhirendra9032/Food_Junction_Point'
-  },
+  }
+  
+
 ];
