@@ -17,6 +17,8 @@ export const projects: ProjectType[] = [
     technology: [
       "React",
       "TypeScript",
+      "React Query",
+      "Custom Hook Pattern",
       "SCSS",
       "Vite",
      
